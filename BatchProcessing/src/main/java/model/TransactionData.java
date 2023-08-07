@@ -27,7 +27,6 @@ public class TransactionData
         }
         if(fieldName.equalsIgnoreCase("systemName"))
         {
-            System.out.println("Inside sys name: ");
             setSystemName(value);
         }
         if(fieldName.equalsIgnoreCase("eventDate"))
