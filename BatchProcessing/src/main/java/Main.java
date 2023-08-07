@@ -12,10 +12,7 @@ public class Main
         try
         {
             Helper.readFile("TRANSACTION_003.csv");
-            for(TransactionData obj : Helper.getTransactionObjects())
-            {
-                System.out.println("Obj : "+ obj.getSystemName().);
-            }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

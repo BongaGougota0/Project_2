@@ -37,7 +37,6 @@ public class Helper
         for(Field field : fields)
         {
             headers.add(field.getName());
-//            System.out.println("Field is: "+field.getName());
         }
          headers.stream().toArray(String[]::new);
         return headers.stream().toArray(String[]::new);
@@ -52,7 +51,6 @@ public class Helper
     {
         for(CSVRecord record : rawCSVData)
         {
-            //System.out.println("Amount Record :" + record.get("transactionNumber"));
             TRANSACTION_DATA_LIST.add(createObject(record, TransactionData.class.getDeclaredFields()));
         }
     }
@@ -60,12 +58,10 @@ public class Helper
     private static TransactionData createObject(CSVRecord csvRecord, Field[] fields)
     {
         TransactionData transactionData = new TransactionData();
-        //Method[] method = TransactionData.class.getMethods();
         for(int i = 0; i < fields.length; i++)
         {
             Field field = fields[i];
             String value = csvRecord.get(i);
-            System.out.println("Value is: "+value+" Field name is: "+field.getName());
             transactionData.set(field.getName(), value);
         }
         return transactionData;

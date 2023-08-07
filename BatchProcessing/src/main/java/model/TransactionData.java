@@ -6,7 +6,6 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-@AllArgsConstructor
 public class TransactionData
 {
     public TransactionData(){};
@@ -22,42 +21,42 @@ public class TransactionData
 
     public void set(String fieldName, String value)
     {
-        System.out.println("F: "+fieldName+" Va: "+value);
-        if(fieldName.equalsIgnoreCase(dataType))
+        if(fieldName.equalsIgnoreCase("dataType"))
         {
-            this.dataType = value;
+            setDataType(value);
         }
-        if(fieldName.equalsIgnoreCase(systemName))
+        if(fieldName.equalsIgnoreCase("systemName"))
         {
-            this.systemName = value;
+            System.out.println("Inside sys name: ");
+            setSystemName(value);
         }
-        if(fieldName.equalsIgnoreCase(eventDate))
+        if(fieldName.equalsIgnoreCase("eventDate"))
         {
-            this.eventDate = value;
+            setEventDate(value);
         }
-        if(fieldName.equalsIgnoreCase(transactionNumber))
+        if(fieldName.equalsIgnoreCase("transactionNumber"))
         {
-            this.transactionNumber = value;
+            setTransactionNumber(value);
         }
-        if(fieldName.equalsIgnoreCase(customerID))
+        if(fieldName.equalsIgnoreCase("customerID"))
         {
-            this.customerID = value;
+            setCustomerID(value);
         }
-        if(fieldName.equalsIgnoreCase(customerName))
+        if(fieldName.equalsIgnoreCase("customerName"))
         {
-            this.customerName = value;
+            setCustomerName(value);
         }
-        if(fieldName.equalsIgnoreCase(transactionDate))
+        if(fieldName.equalsIgnoreCase("transactionDate"))
         {
-            this.transactionDate = value;
+            setTransactionDate(value);
         }
-        if(fieldName.equalsIgnoreCase(productCode))
+        if(fieldName.equalsIgnoreCase("productCode"))
         {
-            this.productCode = value;
+            setProductCode(value);
         }
-        if(fieldName.equalsIgnoreCase(amount))
+        if(fieldName.equalsIgnoreCase("amount"))
         {
-            this.amount = value;
+           setAmount(value);
         }
     }
 }
